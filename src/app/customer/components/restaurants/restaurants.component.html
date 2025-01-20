@@ -1,0 +1,198 @@
+<div class="container-fluid py-4">
+
+  <!-- Restaurants Grid -->
+  <div class="row">
+    <!-- Sidenav Filters -->
+    <div class="col-lg-2 col-md-3 d-none d-md-block">
+      <aside class="sidenav border rounded p-3 shadow">
+        <h5 class="fw-bold mb-3">Filters</h5>
+        <!-- Categories Filter -->
+        <div class="mb-4">
+          <h6 class="text-muted">Categories</h6>
+          <ul class="list-unstyled">
+            <li>
+              <button (click)="filterByCategory('All')" class="btn btn-link">All</button>
+            </li>
+            <li>
+              <button (click)="filterByCategory('Offers')" class="btn btn-link">Offers</button>
+            </li>
+            <li>
+              <button (click)="filterByCategory('Fast Food')" class="btn btn-link">Fast Food</button>
+            </li>
+            <li>
+              <button (click)="filterByCategory('Italian')" class="btn btn-link">Italian</button>
+            </li>
+            <li>
+              <button (click)="filterByCategory('Chinese')" class="btn btn-link">Chinese</button>
+            </li>
+          </ul>
+        </div>
+        <!-- Rating Filter -->
+        <div class="mb-4">
+          <h6 class="text-muted">Ratings</h6>
+          <ul class="list-unstyled">
+            <li>
+              <button (click)="filterByRating(4)" class="btn btn-link">4 stars & up</button>
+            </li>
+            <li>
+              <button (click)="filterByRating(3)" class="btn btn-link">3 stars & up</button>
+            </li>
+            <li>
+              <button (click)="filterByRating(2)" class="btn btn-link">2 stars & up</button>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Restaurants Grid -->
+    <div class="col-lg-10 col-md-9">
+      <!-- Search Bar (Top) -->
+      <div class="row mb-3">
+        <div class="col-12">
+          <form class="search-bar d-flex shadow-sm p-3 rounded">
+            <input
+              type="text"
+              class="form-control me-2"
+              placeholder="Search restaurants or cuisines"
+              [(ngModel)]="searchQuery"
+              [ngModelOptions]="{ standalone: true }"
+              (ngModelChange)="filterBySearch()"
+            />
+            <button class="btn btn-primary" type="button" (click)="filterBySearch()">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+
+        </div>
+      </div>
+
+      <!-- Your Daily Deals Section -->
+      <div class="container py-2">
+        <h2>Your Daily Deals</h2>
+        <div class="row">
+          <!-- Demo Cards -->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <img src="https://images.deliveryhero.io/image/fd-bd/campaign-assets/56d7d978-8b76-11ef-89ea-8ef8580cd68b/desktop_landing_EnKjVF.png?height=450&quality=95&width=2000&?width=2000"
+                   class="card-img-top" alt="Deal Image">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <img src="https://images.deliveryhero.io/image/fd-bd/campaign-assets/6f211fdb-8f6b-11ef-9ff7-2ad15c6550a4/desktop_landing_EnzVjS.png?height=450&quality=95&width=2000&?width=2000"
+                   class="card-img-top" alt="Deal Image">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <img src="https://images.deliveryhero.io/image/fd-bd/campaign-assets/04c60cb6-fc89-11ee-8291-b694295486bc/desktop_landing_EnZmXK.png?height=450&quality=95&width=2000&?width=2000"
+                   class="card-img-top" alt="Deal Image">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+              <img src="https://images.deliveryhero.io/image/fd-bd/campaign-assets/cd4869c6-062e-11ef-9976-4682cc763cb7/desktop_landing_EnJiyU.png?height=450&quality=95&width=2000&?width=2000"
+                   class="card-img-top" alt="Deal Image">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Favorite Categories Section -->
+      <div class="container">
+        <div class="explore-menu" id="explore-menu">
+          <h2>Explore Menu</h2>
+          <p class="explore-menu-text">Explore our menu and enjoy your meal.</p>
+          <div class="explore-menu-list-container">
+            <button class="carousel-btn prev" (click)="prevCategory()">&#10094;</button>
+            <div class="explore-menu-list">
+              <div *ngFor="let item of visibleCategories" class="menu-item" (click)="filterByCategory(item.name)">
+                <div class="explore-menu-item">
+                  <img [src]="item.image" type="png/webp" alt="Food Image">
+                </div>
+                <h6>{{ item.name }}</h6>
+              </div>
+            </div>
+            <button class="carousel-btn next" (click)="nextCategory()">&#10095;</button>
+          </div>
+        </div>
+        <hr class="food-item-hr d-none d-md-block">
+      </div>
+
+      <!-- Restaurants Food Grid -->
+      <div class="container mt-4">
+        <div class="row g-4">
+          <div *ngFor="let restaurant of filteredRestaurants" class="col-lg-4 col-md-6 col-12">
+            <article class="restaurant-card card h-100 shadow-sm" (click)="navigateToRestaurant(restaurant.id)">
+              <!-- Cover Image -->
+              <div class="restaurant-card-cover position-relative overflow-hidden rounded-top">
+                <img
+                  [src]="getImage(restaurant.restaurantImages?.coverImage) || 'assets/default-cover-image.jpg'"
+                  class="restaurant-card-img-top img-fluid"
+                  alt="Restaurant Cover"
+                />
+                <!-- Profile Image -->
+                <img
+                  [src]="getImage(restaurant.restaurantImages?.dpImage) || 'assets/default-dp-image.jpg'"
+                  class="restaurant-card-profile img-fluid rounded-circle border position-absolute"
+                  alt="Restaurant DP"
+                />
+              </div>
+
+              <!-- Card Body -->
+              <div class="restaurant-card-body card-body pt-4">
+                <h6 class="restaurant-card-title card-title mb-2 text-truncate"><strong>{{ restaurant.name }}</strong></h6>
+                <p class="restaurant-card-cuisine mb-1 text-muted small">{{ restaurant.cuisineType }}</p>
+                <p class="restaurant-card-description text-muted small text-truncate">{{ restaurant.description }}</p>
+                <div class="d-flex align-items-center justify-content-between mt-3">
+            <span class="restaurant-card-rating badge bg-warning text-dark">
+              <i class="fa fa-star"></i> {{ restaurant.totalRating.toFixed(1) }}
+            </span>
+                  <span class="restaurant-card-delivery text-success small">
+              <i class="fa fa-truck"></i> Free Delivery
+            </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div id="jeff" class="container">
+  <div id="row1">
+    <div class="stack">
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/1.webp');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/2.webp');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/3.jpg');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/4.jpg');"></div>
+    </div>
+    <div class="stack back">
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/1.webp');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/2.webp');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/3.jpg');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/4.jpg');"></div>
+    </div>
+  </div>
+  <div id="row2">
+    <div class="stack reverse">
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/5.jpg');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/6.jpg');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/7.jpg');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/8.jpg');"></div>
+    </div>
+    <div class="stack reverse">
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/5.jpg');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/6.jpg');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/7.jpg');"></div>
+      <div class="imagen" style="background-image: url('https://raw.githubusercontent.com/RicardoYare/imagenes/refs/heads/main/imgBurg/8.jpg');"></div>
+    </div>
+  </div>
+</div>

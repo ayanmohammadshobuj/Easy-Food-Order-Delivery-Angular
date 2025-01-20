@@ -1,0 +1,31 @@
+
+<div class="container ">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Product Id</th>
+      <th scope="col">Image</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cart of carts; trackBy: trackByCartId">
+      <td *ngFor="let product of cart.products; trackBy: trackByProductId">
+        {{ product.productId }}
+      </td>
+      <td *ngFor="let product of cart.products; trackBy: trackByProductId">
+        <!--        <img src="" alt="{{ product.productId }}" class="w-25 h-25">-->
+        <img [src]="product.thumbnail!" alt="{{ product.productId }}" class="w-25 h-25">
+      </td>
+      <td *ngFor="let product of cart.products; trackBy: trackByProductId">{{ product.quantity }}</td>
+      <td>${{ cart.total }}</td>
+      <td >
+        <button (click)="checkout()" class="me-2">Check out</button>
+        <button (click)="removeCart(cart.cartId)">Remove</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

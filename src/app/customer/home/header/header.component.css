@@ -1,0 +1,137 @@
+/* General Header Styles */
+header {
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: tomato;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+  color: #ff6347;
+  text-decoration: none;
+}
+
+/* Button Styles */
+.btn-light {
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-light:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.05);
+}
+
+.profile-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  border-radius: 0 10px 10px 0;
+  background-color: tomato;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #ff6347;
+}
+
+/* Profile Dropdown */
+.profile-menu .dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: tomato;
+  color: #fff;
+}
+
+/* Search Form */
+.search-form .input-group {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.search-input {
+  border-radius: 10px 0 0 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.search-dropdown {
+  border: 1px solid #ddd;
+}
+
+.search-button {
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+}
+
+.search-button:hover {
+  background-color: #ff6347;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-main .row {
+    text-align: center;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-form {
+    margin-top: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
+
+/*Profile Image Styles*/
+.profile-image {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.dropdown-item {
+  cursor: pointer;
+}

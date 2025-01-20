@@ -1,0 +1,37 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div class="container-fluid main-container">
+    <mat-label>Contact</mat-label>
+    <mat-divider></mat-divider>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <mat-card-content>
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>Phone Number</mat-label>
+            <input matInput type="text" formControlName="mobile">
+          </mat-form-field>
+        </mat-card-content>
+      </div>
+      <div class="col-sm-4">
+        <mat-card-content>
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email">
+          </mat-form-field>
+        </mat-card-content>
+      </div>
+      <div class="col-sm-4">
+        <mat-card-content>
+          <mat-form-field appearance="outline" style="width: 100%">
+            <mat-label>Website</mat-label>
+            <input matInput type="text" formControlName="website">
+          </mat-form-field>
+        </mat-card-content>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between">
+      <button mat-button type="button" routerLink="/restaurant/edit/address">Back</button>
+      <button mat-button type="submit">Save</button>
+    </div>
+  </div>
+</form>

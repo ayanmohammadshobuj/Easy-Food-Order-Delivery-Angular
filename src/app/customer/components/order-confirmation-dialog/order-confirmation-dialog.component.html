@@ -1,0 +1,19 @@
+<!-- src/app/customer/components/order-confirmation-dialog/order-confirmation-dialog.component.html -->
+<h2 mat-dialog-title>Order Confirmation</h2>
+<mat-dialog-content>
+  <p>Are you sure you want to place this order?</p>
+  <ul>
+    <li>Restaurant ID: {{ data.restaurantId }}</li>
+    <li>Payment Method: {{ data.paymentMethod }}</li>
+    <li>Apartment: {{ data.apartment }}</li>
+    <li>Street: {{ data.street }}</li>
+    <li>City: {{ data.city }}</li>
+    <li>Landmark: {{ data.landmark }}</li>
+    <li>Label: {{ data.label }}</li>
+    <li>Phone: {{ data.phone }}</li>
+  </ul>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onConfirm()">Confirm</button>
+</mat-dialog-actions>

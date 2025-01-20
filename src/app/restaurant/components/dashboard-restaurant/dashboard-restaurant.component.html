@@ -1,0 +1,59 @@
+<div class="dashboard">
+  <!-- Restaurant Info -->
+  <mat-card class="restaurant-header">
+    <mat-card-header class="restaurant-header-content">
+      <mat-card-title>{{ restaurant?.name }}</mat-card-title>
+      <mat-card-subtitle>{{ restaurant?.description }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="'data:image/png;base64,' + restaurant?.restaurantImages.coverImage" alt="Cover Image" class="cover-image" />
+    <mat-card-content>
+      <div class="profile-info d-flex">
+        <img [src]="'data:image/png;base64,' + restaurant?.restaurantImages.dpImage" alt="Profile Image" class="profile-image" />
+        <div class="mx-4">
+          <p><strong>Cuisine Type:</strong> {{ restaurant?.cuisineType }}</p>
+          <p><strong>Opening Hours:</strong> {{ restaurant?.openingHours }} - {{ restaurant?.closingHours }}</p>
+          <p><strong>Total Rating:</strong> {{ restaurant?.totalRating }} ⭐</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Statistics -->
+  <div class="statistics">
+    <mat-card class="stat-card stat-orders" *ngFor="let stat of statistics">
+      <mat-card-title>{{ stat.title }}</mat-card-title>
+      <mat-card-content>
+        <p>{{ stat.value }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Featured Foods -->
+  <h2>Featured Foods</h2>
+  <div class="food-items">
+    <mat-grid-list cols="4" rowHeight="280px" gutterSize="10px">
+      <mat-grid-tile *ngFor="let food of restaurant?.foods">
+        <mat-card class="food-card">
+          <img mat-card-image [src]="'data:image/png;base64,' + food.image" alt="{{ food.name }}" />
+          <mat-card-header>
+            <mat-card-title>{{ food.name }}</mat-card-title>
+            <mat-card-subtitle>${{ food.price }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ food.description }}</p>
+            <p><strong>Available:</strong> {{ food.available ? 'Yes' : 'No' }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button
+              mat-button
+              color="{{ food.available ? 'warn' : 'primary' }}"
+              (click)="toggleAvailability(food)"
+            >
+              {{ food.available ? 'Mark Unavailable' : 'Mark Available' }}
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<!-- cart.component.html -->
+<div class="main-container container p-4">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="text-center mb-4">Cart Items</h3>
+
+      <!-- Loop through cart items -->
+      <div *ngFor="let item of cartItems" class="row mb-4 align-items-center border p-3 rounded shadow-sm">
+        <!-- Food Image -->
+        <div class="col-12 col-md-4">
+          <img [src]="getImage(item.food.image)" alt="{{ item.food.name }}" class="img-fluid rounded">
+        </div>
+        <div class="col-12 col-md-8">
+          <!-- Food Details -->
+          <h5>{{ item.food.name }}</h5>
+          <p>{{ item.food.description }}</p>
+          <p><strong>Price:</strong> {{ item.food.price | currency }}</p>
+          <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+          <p><strong>Total:</strong> {{ item.totalPrice | currency }}</p>
+
+          <!-- Cart Item Actions -->
+          <div class="d-flex justify-content-between mt-3">
+            <div class="btn-group">
+              <button (click)="updateCartItemQuantity(item.food.id, item.quantity + 1)" class="btn btn-outline-primary btn-sm">
+                <i class="fa fa-plus"></i>
+              </button>
+              <button (click)="updateCartItemQuantity(item.food.id, item.quantity - 1)"
+                      class="btn btn-outline-secondary btn-sm"
+                      [disabled]="item.quantity <= 1">
+                <i class="fa fa-minus"></i>
+              </button>
+            </div>
+            <button (click)="removeCartItem(item.food.id)" class="btn btn-outline-danger btn-sm">
+              <i class="fa fa-trash-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Price Summary -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <p><strong>Sub Total:</strong> {{ totalPrice - ((totalPrice / 1.05) * 0.05) | currency }}</p>
+          <p><strong>Service Charge:</strong> {{ (totalPrice / 1.05) * 0.05 | currency }}</p>
+          <p><strong>Delivery Charge:</strong> Free, <del>$70</del></p>
+          <h5><strong>Total Price:</strong> {{ totalPrice | currency }}</h5>
+        </div>
+      </div>
+
+      <!-- Checkout Button -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <button (click)="checkout()" class="btn btn-gradient btn-lg w-100">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

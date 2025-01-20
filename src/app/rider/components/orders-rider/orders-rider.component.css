@@ -1,0 +1,71 @@
+/* Gradient Background */
+.gradient-background {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+/* Responsive Order Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Header */
+.card-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-body p {
+  margin-bottom: 0.5rem;
+}
+
+/* Summary Cards */
+.card.text-white {
+  border-radius: 12px;
+}
+
+.card h5 {
+  font-size: 1.1rem;
+}
+
+/* Sorting Buttons */
+.sorting-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sorting-buttons .btn {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.sorting-buttons .btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Loading Animation */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+/* Headings */
+h2 {
+  font-weight: bold;
+}

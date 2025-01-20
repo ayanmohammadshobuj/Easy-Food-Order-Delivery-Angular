@@ -1,0 +1,70 @@
+<div class="order-list">
+  <h2>My Orders</h2>
+  <mat-card *ngFor="let order of orders" class="order-card">
+    <mat-card-header class="order-header">
+      <mat-card-title class="order-title">Order ID: {{ order.id }}</mat-card-title>
+      <mat-card-subtitle class="order-status">
+        <span [ngClass]="{ 'status-pending': order.orderStatus === 'PENDING', 'status-completed': order.orderStatus === 'COMPLETED' }">
+          Status: {{ order.orderStatus }}
+        </span>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="order-details">
+        <p><strong>Total Items:</strong> {{ order.totalItem }}</p>
+        <p><strong>Total Price:</strong> {{ order.totalPrice | currency }}</p>
+        <p><strong>Payment Method:</strong> {{ order.paymentMethod }}</p>
+        <p><strong>Payment Status:</strong>
+          <span [ngClass]="{ 'paid': order.paymentStatus === 'PAID', 'unpaid': order.paymentStatus === 'UNPAID' }">
+            {{ order.paymentStatus }}
+          </span>
+        </p>
+        <p><strong>Address:</strong> {{ order.apartment }}, {{ order.street }}, {{ order.city }} ({{ order.label }})</p>
+        <p><strong>Landmark:</strong> {{ order.landmark }}</p>
+        <p><strong>Phone:</strong> {{ order.phone }}</p>
+        <p><strong>Order Date:</strong> {{ order.createdAt | date }}</p>
+      </div>
+      <mat-divider></mat-divider>
+
+      <!-- Collapsible Delivery Details -->
+      <mat-accordion>
+        <mat-expansion-panel class="delivery-details-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Delivery Details
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngIf="deliveryDetails[order.id]">
+            <p><strong>Rider Name:</strong> {{ deliveryDetails[order.id].rider.name }}</p>
+            <p><strong>Rider Phone:</strong> {{ deliveryDetails[order.id].rider.phone }}</p>
+            <p><strong>OTP:</strong> {{ deliveryDetails[order.id].otp }}</p>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-divider></mat-divider>
+
+      <!-- Collapsible Order Items -->
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let item of order.orderItems" class="item-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ item.food.name }}
+            </mat-panel-title>
+            <mat-panel-description>
+              Total: {{ item.totalPrice | currency }}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="order-item">
+            <img [src]="'data:image/png;base64,' + item.food.image" alt="{{ item.food.name }}" />
+            <div>
+              <p><strong>Description:</strong> {{ item.food.description }}</p>
+              <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+              <p><strong>Price per Item:</strong> {{ item.food.price | currency }}</p>
+              <p><strong>Total Price:</strong> {{ item.totalPrice | currency }}</p>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+  </mat-card>
+</div>

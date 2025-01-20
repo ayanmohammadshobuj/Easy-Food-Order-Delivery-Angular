@@ -1,0 +1,77 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Rider Deliveries</h2>
+
+  <div *ngIf="loading" class="text-center">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <div *ngIf="!loading">
+    <ul class="nav nav-tabs mb-4">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab === 'processing'" (click)="setTab('processing')">Processing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab === 'completed'" (click)="setTab('completed')">Completed</a>
+      </li>
+    </ul>
+
+    <!-- Processing Deliveries -->
+    <div *ngIf="activeTab === 'processing' && processingDeliveries.length > 0" class="row">
+      <div class="col-md-6 col-lg-4 mb-3" *ngFor="let delivery of processingDeliveries">
+        <div class="card shadow">
+          <div class="card-header bg-warning text-dark">
+            Delivery #{{ delivery.id }}
+          </div>
+          <div class="card-body">
+            <p><strong>Status:</strong> {{ delivery.status }}</p>
+            <p><strong>Restaurant:</strong> {{ delivery.restaurantName }}</p>
+            <p><strong>Restaurant Address:</strong> {{ delivery.restaurantAddress }}</p>
+            <p><strong>Customer:</strong> {{ delivery.customerName }}</p>
+            <p><strong>Customer Address:</strong> {{ delivery.customerAddress }}</p>
+            <p><strong>Landmark:</strong> {{ delivery.landmark }}</p>
+            <p><strong>Customer Phone:</strong> {{ delivery.customerPhone }}</p>
+
+            <!-- Update to PICKED_UP -->
+            <button *ngIf="delivery.status === 'ACCEPTED'" class="btn btn-primary w-100 mb-2" (click)="updateToPickedUp(delivery.id)">
+              Mark as Picked Up
+            </button>
+
+            <!-- Update to DELIVERED -->
+            <div *ngIf="delivery.status === 'PICKED_UP'">
+              <input type="number" class="form-control mb-2" placeholder="Enter OTP" [(ngModel)]="delivery.otpInput" />
+              <button class="btn btn-success w-100" (click)="updateToDelivered(delivery.id, delivery.otpInput)">
+                Mark as Delivered
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Completed Deliveries -->
+    <div *ngIf="activeTab === 'completed' && completedDeliveries.length > 0" class="row">
+      <div class="col-md-6 col-lg-4 mb-3" *ngFor="let delivery of completedDeliveries">
+        <div class="card shadow">
+          <div class="card-header bg-success text-white">
+            Delivery #{{ delivery.id }}
+          </div>
+          <div class="card-body">
+            <p><strong>Status:</strong> {{ delivery.status }}</p>
+            <p><strong>Restaurant:</strong> {{ delivery.restaurantName }}</p>
+            <p><strong>Customer:</strong> {{ delivery.customerName }}</p>
+            <p><strong>Delivered Time:</strong> {{ delivery.deliveryCompletedTime | date: 'short' }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="activeTab === 'processing' && processingDeliveries.length === 0" class="text-center">
+      <p>No processing deliveries found.</p>
+    </div>
+    <div *ngIf="activeTab === 'completed' && completedDeliveries.length === 0" class="text-center">
+      <p>No completed deliveries found.</p>
+    </div>
+  </div>
+</div>

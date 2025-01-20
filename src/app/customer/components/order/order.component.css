@@ -1,0 +1,36 @@
+.text-primary {
+  color: tomato !important;
+}
+
+.text-danger {
+  color: #e74c3c;
+}
+
+.text-warning {
+  color: #f39c12;
+}
+
+.text-info {
+  color: tomato;
+}
+
+.text-success {
+  color: #27ae60;
+}
+
+.form-check-input:checked + .form-check-label {
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+.form-check-label i {
+  margin-right: 8px;
+}
+
+.border-primary {
+  border-color: tomato !important;
+}
+
+.border-info {
+  border-color: #e74c3c !important;
+}

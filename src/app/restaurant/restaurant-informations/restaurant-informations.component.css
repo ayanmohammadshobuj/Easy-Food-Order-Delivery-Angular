@@ -1,0 +1,23 @@
+.main_container {
+  background: url('/assets/admin_assets/vegetables-set-left-black-slate.jpg') no-repeat center center;
+  background-size: cover;
+  /*transform: scaleX(-1); !* Mirror the image *!*/
+  color: white; /* Set text color to white */
+  padding: 20px;
+  height: 100%;
+}
+
+mat-form-field, mat-label, mat-input-element, mat-card-content, mat-button, input, textarea, select {
+  color: white !important; /* Ensure all form elements have white text */
+}
+
+
+button {
+  background-color: #d12100; /* Set button background color */
+  color: white; /* Set button text color */
+  opacity: 85%;
+}
+
+.main_content {
+  backdrop-filter: blur(1px); /* Add blurry effect */
+}

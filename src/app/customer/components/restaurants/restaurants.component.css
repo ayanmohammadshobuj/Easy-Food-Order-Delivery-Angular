@@ -1,0 +1,329 @@
+/* Search Bar */
+.search-bar {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.search-bar input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.search-bar button {
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.search-bar button:hover {
+  background-color: #ff6347;
+}
+
+/* Styling for the "Your Daily Deals" Cards */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 120px; /* Adjusted image height */
+  width: 280px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+
+/* Restaurants Grid */
+.card-product-grid:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidenav {
+    display: none;
+  }
+
+  .search-bar {
+    margin-bottom: 15px;
+  }
+}
+
+#jeff {
+  margin-top: 2%;
+  width: 80%;
+  aspect-ratio: 1 / 0.4;
+  padding: 30px;
+  border-top-right-radius: 6dvw;
+  border-bottom-left-radius: 6dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+#row1 {
+  margin-top: 18%;
+  position: absolute;
+  top: -65%;
+  left: -1%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-10deg);
+}
+
+
+#row2 {
+  margin-top: 9%;
+  position: absolute;
+  top: 18%;
+  left: -1%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-10deg);
+}
+
+.stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: infiniteLeft 50s linear infinite;
+}
+
+.imagen {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+  width: 15vw;
+  height: 15vw;
+  aspect-ratio: 1 / 1;
+  margin: 0.4%;
+  border-radius: 2dvw;
+  filter: blur(0.85px);
+}
+
+.reverse {
+  animation: infiniteRight 50s linear infinite;
+  transform: translateX(-100%);
+}
+
+
+@keyframes infiniteLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes infiniteRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+/* Specific Styles for Restaurant Cards */
+.restaurant-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cover Image */
+.restaurant-card-cover .restaurant-card-img-top {
+  object-fit: cover;
+  width: 100%;
+  height: 200px; /* Ensures consistent card height */
+}
+
+/* Profile Image */
+.restaurant-card-profile {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #fff;
+  background-color: #fff;
+  object-fit: cover;
+  bottom: -30px;
+  left: 20px;
+  position: absolute; /* Ensure it is positioned correctly */
+  z-index: 10; /* Ensures it is above the cover image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Card Content */
+.restaurant-card-body .restaurant-card-title {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.restaurant-card-body .restaurant-card-cuisine {
+  font-size: 0.9rem;
+}
+
+.restaurant-card-body .restaurant-card-description {
+  font-size: 0.8rem;
+}
+
+.restaurant-card-body .restaurant-card-rating {
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffeb3b, #ffc107);
+  color: #000;
+}
+
+.restaurant-card-body .restaurant-card-delivery {
+  font-weight: 500;
+  color: #28a745 !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .restaurant-card-cover .restaurant-card-img-top {
+    height: 160px;
+  }
+
+  .restaurant-card-profile {
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+  }
+
+  .restaurant-card-body .restaurant-card-title {
+    font-size: 0.9rem;
+  }
+
+  .restaurant-card-body .restaurant-card-rating {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .restaurant-card-cover .restaurant-card-img-top {
+    height: 140px;
+  }
+
+  .restaurant-card-profile {
+    width: 45px;
+    height: 45px;
+    bottom: -22px;
+  }
+
+  .restaurant-card-body .restaurant-card-rating {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+}
+
+
+.explore-menu {
+  max-width: 100%;
+  columns: auto;
+  margin-top: 30px;
+}
+
+.explore-menu-list {
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+  text-align: center;
+  overflow-x: scroll;
+}
+
+.explore-menu-item {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.explore-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+.explore-menu-item:hover {
+  border: 4px solid tomato;
+  /* transition: 2.05s 4px solid tomato; */
+}
+
+/* Add styles for carousel buttons */
+.carousel-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.carousel-btn:hover {
+  color: #000;
+}
+
+.explore-menu-list-container {
+  display: flex;
+  align-items: center;
+}
+
+.explore-menu-list {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}

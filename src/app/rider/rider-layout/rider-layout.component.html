@@ -1,0 +1,52 @@
+<div class="full_layout">
+
+  <div class="container-fluid py-3 main-container shadow-lg" [style.background]="containersBackgroundColor()">
+
+    <div class="d-flex justify-content-between">
+
+      <div class="d-flex justify-content-between" style="width: 250px">
+        <div class="brand-logo-container" style="width: 220px">
+          <a routerLink="/admin" class="brand-logo">
+            <span>Easy Food</span>
+          </a>
+        </div>
+        <div class="float-md-end" style="width: 30px">
+          <button mat-icon-button (click)="collapsed.set(!collapsed())">
+            <mat-icon [style.color]="iconColor()">menu</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="one-quarter d-flex justify-content-end me-4 mt-2" id="switch">
+          <input type="checkbox" class="checkbox" [checked]="isDarkMode()" (click)="doChecked()" id="chk"/>
+          <label class="label" for="chk" [style.background]="backgroundColor()">
+            <div class="d-flex" style="width: 42px">
+              <div class="d-flex" style="width: 21px"><i *ngIf="isDarkMode()" class="fas fa-moon"></i></div>
+              <div class="d-flex" style="width: 21px"><i *ngIf="!isDarkMode()" class="fas fa-sun"></i></div>
+            </div>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!--  </mat-toolbar>-->
+
+  <mat-sidenav-container [style.background]="backgroundColor()">
+    <!--side navbar-->
+    <mat-sidenav class="sidenav" opened mode="side" [style.width]="sidenavWidth()"
+                 [style.background]="containersBackgroundColor()">
+      <app-custom-sidenav-rider [collapsed]="collapsed()"/>
+    </mat-sidenav>
+    <mat-sidenav-content class="content" [style.margin-left]="sidenavWidth()">
+      <div class="router_outlet" [style.background]="containersBackgroundColor()" [style.color]="textColor()">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>

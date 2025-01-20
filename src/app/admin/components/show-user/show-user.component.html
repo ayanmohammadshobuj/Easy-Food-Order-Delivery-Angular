@@ -1,0 +1,60 @@
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label [style.color]="textColor()">Search</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search users" [style.color]="textColor()">
+  </mat-form-field>
+</div>
+
+<mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef mat-sort-header [style.color]="textColor()"> ID</mat-header-cell>
+    <mat-cell *matCellDef="let element" [style.color]="textColor()"> {{ element.id }}</mat-cell>
+  </ng-container>
+
+  <!-- Profile Picture Column -->
+  <ng-container matColumnDef="displayPicture">
+    <mat-header-cell *matHeaderCellDef [style.color]="textColor()"> Profile Picture</mat-header-cell>
+    <mat-cell *matCellDef="let element" class="profilePicture">
+      <img *ngIf="element.displayPicture" [src]="element.displayPicture" alt="Profile Picture" width="50" height="50">
+    </mat-cell>
+  </ng-container>
+
+  <!-- Full Name Column -->
+  <ng-container matColumnDef="fullName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header [style.color]="textColor()"> Full Name</mat-header-cell>
+    <mat-cell *matCellDef="let element" [style.color]="textColor()"> {{ element.fullName }}</mat-cell>
+  </ng-container>
+
+  <!-- Email Column -->
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef mat-sort-header [style.color]="textColor()"> Email</mat-header-cell>
+    <mat-cell *matCellDef="let element" [style.color]="textColor()"> {{ element.email }}</mat-cell>
+  </ng-container>
+
+  <!-- Role Column -->
+  <ng-container matColumnDef="role">
+    <mat-header-cell *matHeaderCellDef mat-sort-header [style.color]="textColor()"> Role</mat-header-cell>
+    <mat-cell *matCellDef="let element" [style.color]="textColor()"> {{ element.role }}</mat-cell>
+  </ng-container>
+
+  <!-- Action Column -->
+  <ng-container matColumnDef="action">
+    <mat-header-cell *matHeaderCellDef [style.color]="textColor()"> Action</mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button mat-mini-fab (click)="editUser(element)" class="mx-2" [style.background]="backgroundColor()">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-mini-fab (click)="deleteUser(element.id)" class="mx-2" [style.background]="backgroundColor()">
+        <mat-icon style="color: #d12100">delete</mat-icon>
+      </button>
+
+
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+<mat-paginator [pageSizeOptions]="[5, 10]" showFirstLastButtons></mat-paginator>

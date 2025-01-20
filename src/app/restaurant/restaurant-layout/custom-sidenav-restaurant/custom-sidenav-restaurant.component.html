@@ -1,0 +1,52 @@
+<div class="sidenav-header">
+  <img
+    [width]="profilePicSize()"
+    [height]="profilePicSize()"
+    [src]="imageData" alt="image"
+  />
+  <div class="header-text" [class.hide-header-text]="sideNavCollapsed()">
+    <h2 [style.color]="textColor()">{{ userName() }}</h2>
+    <p>{{ userRole() }}</p>
+  </div>
+</div>
+<mat-nav-list>
+  <ng-container *ngFor="let item of menuItems()">
+    <a
+      mat-list-item
+      class="menu-item"
+      [routerLink]="item.route"
+      [style.width]="sideNavCollapsed() ? '60px' : '200px'"
+      routerLinkActive="selected-menu-item"
+      [routerLinkActiveOptions]="{ exact: true }"
+      #rla="routerLinkActive"
+      [activated]="rla.isActive"
+      (click)="item.subMenu ? toggleSubMenu(item.label) : null"
+    >
+      <mat-icon matListItemIcon [style.color]="iconColor()">{{ item.icon }}</mat-icon>
+      <span matListItemTitle *ngIf="!sideNavCollapsed()" [style.color]="textColor()">{{ item.label }}</span>
+    </a>
+    <ng-container *ngIf="item.subMenu && isSubMenuExpanded(item.label)">
+      <div class="sub-menu">
+        <a
+          mat-list-item
+          class="sub-menu-item"
+          *ngFor="let subItem of item.subMenu"
+          [routerLink]="subItem.route"
+          [style.width]="sideNavCollapsed() ? '60px' : '200px'"
+          routerLinkActive="selected-menu-item"
+          [routerLinkActiveOptions]="{ exact: true }"
+          #subRla="routerLinkActive"
+          [activated]="subRla.isActive"
+        >
+          <mat-icon matListItemIcon [style.color]="iconColor()">{{ subItem.icon }}</mat-icon>
+          <span matListItemTitle *ngIf="!sideNavCollapsed()" [style.color]="textColor()">{{ subItem.label }}</span>
+        </a>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <a mat-list-item class="menu-item" (click)="logout()">
+    <mat-icon matListItemIcon [style.color]="iconColor()">logout</mat-icon>
+    <span matListItemTitle *ngIf="!sideNavCollapsed()" [style.color]="textColor()">Logout</span>
+  </a>
+</mat-nav-list>

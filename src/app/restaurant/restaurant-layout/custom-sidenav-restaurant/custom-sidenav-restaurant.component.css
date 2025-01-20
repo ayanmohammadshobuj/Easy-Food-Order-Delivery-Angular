@@ -1,0 +1,89 @@
+
+:host * {
+  transition: all 300ms ease-in-out;
+}
+
+.sidenav-header {
+  padding-top: 20px;
+  text-align: center;
+
+  > img {
+    border-radius: 100%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+  }
+
+  .header-text {
+    >h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.5rem;
+      color: #001827;
+    }
+
+    >p {
+      margin: 0;
+      font-size: 0.85rem;
+      line-height: 1rem;
+      color: #0f2cd8;
+    }
+  }
+}
+
+.hide-header-text {
+  opacity: 0;
+  height: 0 !important;
+}
+
+.menu-item {
+  max-height: 40px!important;
+  /*width: 200px;!important;*/
+  border-left: 3px solid;
+  border-left-color: rgb(0, 0, 0, 0);
+  margin-top:3px;
+  /*margin-left: 5px;*/
+}
+
+.menu-item:hover{
+  border-left-color: rgb(0, 0, 0, 0.05);
+  background: rgb(0, 0, 0, 0.05);
+  color: #0f2cd8;
+
+  mat-icon {
+    color: #0f2cd8;
+  }
+
+  span {
+    color: #0f2cd8;
+  }
+}
+
+.selected-menu-item {
+  border-left: 5px solid;
+  background: rgb(0, 0, 0, 0.05);
+  color: #0f2cd8;
+
+  mat-icon {
+    color: #0f2cd8!important;
+  }
+
+  span {
+    color: #0f2cd8!important;
+  }
+}
+
+.sub-menu {
+  padding-left: 20px; /* Indent sub-menu items */
+}
+
+.sub-menu-item {
+  font-size: 0.9em; /* Slightly smaller font for sub-menu items */
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<header class="section-header">
+  <section class="header-main">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <!-- Logo -->
+        <div class="col-lg-2 col-sm-4 col-4 text-lg-start text-center">
+          <a href="#" class="navbar-brand">
+            <strong>EASY FOOD</strong>
+          </a>
+        </div>
+
+        <!-- Buttons: Sign In / Profile, Favorites, Cart -->
+        <div class="order-lg-last col-lg-5 col-sm-8 col-8 text-lg-end text-center">
+          <div class="btn-group align-items-center justify-content-center">
+            <button *ngIf="!isLoggedIn" class="btn btn-light" routerLink="/user/login" id="signIn">
+              <i class="fa fa-user"></i>
+              <span class="ms-1 d-none d-sm-inline-block">Sign in</span>
+            </button>
+
+            <div *ngIf="isLoggedIn" class="btn btn-light profile-button dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="profile-image">
+                <img [src]="profileImage || 'assets/default-dp-image.jpg'" alt="Profile Image">
+              </div>
+              <span class="ms-1 d-none d-sm-inline-block">Profile</span>
+            </div>
+            <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+              <li><a class="dropdown-item" routerLink="/customer/orders"><i class="fas fa-shopping-cart fa-fw"></i> Orders</a></li>
+              <li><a class="dropdown-item" routerLink="/customer/profile"><i class="fas fa-sliders-h fa-fw"></i> Account</a></li>
+              <li><a class="dropdown-item" routerLink="/customer/profile/settings"><i class="fas fa-cog fa-fw"></i> Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" (click)="updateProfileImage($event)"><i class="fas fa-image fa-fw"></i> Profile Image Update</a> </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" (click)="logout()" id="signOut"><i class="fas fa-sign-out-alt fa-fw"></i> Log Out</a></li>
+            </ul>
+
+            <a routerLink="/customer/favorites" class="btn btn-light">
+              <i class="fa fa-heart"></i>
+              <span class="ms-1 d-none d-sm-inline-block">Favorites</span>
+            </a>
+            <a (click)="goToCart()" class="btn btn-light">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="ms-1">My cart</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div *ngIf="isHomePage" class="col-lg-5 col-md-12 col-12">
+          <form action="#" class="search-form">
+            <div class="input-group">
+              <input type="search" class="form-control search-input" placeholder="Search">
+              <select class="form-select search-dropdown">
+                <option value="">All type</option>
+                <option value="codex">Special</option>
+                <option value="comments">Only best</option>
+                <option value="content">Latest</option>
+              </select>
+              <button class="btn btn-primary search-button">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>

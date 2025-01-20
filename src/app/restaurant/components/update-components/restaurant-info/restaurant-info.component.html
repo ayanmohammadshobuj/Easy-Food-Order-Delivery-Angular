@@ -1,0 +1,18 @@
+<!-- auth/restaurant-info/restaurant-info.component.html -->
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-md-4">
+      <input type="file" (change)="onFileChange($event, 'dpImage')" />
+      <img *ngIf="dpImagePreview" [src]="dpImagePreview" alt="DP Image Preview" style="width: 100px; height: 100px;">
+    </div>
+    <div class="col-md-4">
+      <input type="file" (change)="onFileChange($event, 'coverImage')" />
+      <img *ngIf="coverImagePreview" [src]="coverImagePreview" alt="Cover Image Preview" style="width: 100px; height: 100px;">
+    </div>
+    <div class="col-md-4">
+      <input type="file" (change)="onFileChange($event, 'displayImage')" />
+      <img *ngIf="displayImagePreview" [src]="displayImagePreview" alt="Display Image Preview" style="width: 100px; height: 100px;">
+    </div>
+  </div>
+  <button mat-button type="submit">save</button>
+</form>

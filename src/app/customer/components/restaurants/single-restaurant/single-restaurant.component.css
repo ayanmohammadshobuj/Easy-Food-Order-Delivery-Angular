@@ -1,0 +1,137 @@
+.main_container {
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-size: 1.0rem;
+  font-weight: 400;
+  font-family: "Times New Roman", serif;
+}
+
+
+/* CSS */
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  height: 42px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  flex-grow: 1;
+  border-radius: 5px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.search-button i {
+  font-size: 16px;
+}
+
+.search-container:hover, .search-container:focus-within i {
+  color: tomato;
+}
+
+.search-container:hover {
+  border: 1px solid tomato;
+}
+
+.search-container:focus-within {
+  border: 1px solid tomato;
+}
+.search-container:focus-within .search-input {
+  color: tomato;
+  /*font-weight: bold;*/
+}
+
+/*.food-image {*/
+/*  width: 140px;*/
+/*  height: 140px;*/
+/*  object-fit: contain;*/
+/*  display: flex;*/
+/*}*/
+
+/* Style for category title */
+.category-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Food card styling */
+.food-card {
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Hover effect on card */
+.food-card:hover {
+  transform: scale(1.05);
+}
+
+/* Food image styling */
+.food-image {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Card body content */
+.card-body {
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* Price styling */
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Button and cart quantity styling */
+.btn-group {
+  display: flex;
+  align-items: center;
+}
+
+.cart-quantity {
+  margin: 0 10px;
+  font-size: 1.1rem;
+}
+
+.cart-btn {
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  background-color: #fff;
+}
+
+.cart-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #ced4da;
+}
+
+@media (max-width: 768px) {
+  .food-image {
+    height: 150px;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,12 @@
+mat-table, mat-paginator {
+  border-radius: 8px;
+  overflow: hidden;
+  background: transparent;
+}
+
+
+img {
+  border-radius: 100%;
+  margin: 2px;
+  border: 4px solid rgba(15, 2, 250, 0.1);
+}

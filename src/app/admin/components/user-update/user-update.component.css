@@ -1,0 +1,29 @@
+/* Center the form content */
+mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the form fields */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Style the file input */
+input[type="file"] {
+  margin-top: 16px;
+}
+
+/* Style the dialog actions */
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+/* Style the buttons */
+button {
+  margin-left: 8px;
+}

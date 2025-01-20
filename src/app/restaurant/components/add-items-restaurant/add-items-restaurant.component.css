@@ -1,0 +1,11 @@
+.container {
+  max-width: 800px;
+}
+
+.mat-form-field {
+  margin-bottom: 16px;
+}
+
+button {
+  margin-top: 16px;
+}

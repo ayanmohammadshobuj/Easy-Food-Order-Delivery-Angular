@@ -1,0 +1,11 @@
+<div class="favorites">
+  <h2>Your Favorite Restaurants</h2>
+  <div *ngFor="let restaurant of favoriteRestaurants" class="restaurant-card" (click)="navigateToRestaurant(restaurant.id)">
+    <img [src]="'data:image/png;base64,' + restaurant.dpImage" alt="{{ restaurant.title }}" class="restaurant-image">
+    <h3>{{ restaurant.title }}</h3>
+    <p>{{ restaurant.category }}</p>
+    <p>{{ restaurant.cuisine }}</p>
+    <p>{{ restaurant.status }}</p>
+    <p>{{ restaurant.description }}</p>
+  </div>
+</div>

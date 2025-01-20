@@ -1,0 +1,850 @@
+{
+  "products": [
+    {
+      "productId": 1,
+      "title": "Iec-Cream",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 103,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Stock Available",
+      "thumbnail": "assets/frontend_assets/ice-cream.webp",
+      "id": "9031"
+    },
+    {
+      "productId": 2,
+      "title": "Green Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 104,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_2.png",
+      "id": "17ed"
+    },
+    {
+      "productId": 3,
+      "title": "Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 105,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_3.png",
+      "id": "fadb"
+    },
+    {
+      "productId": 4,
+      "title": "Sharma",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 103,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_4.png",
+      "id": "b781"
+    },
+    {
+      "productId": 5,
+      "title": "Pizza",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 104,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_5.png",
+      "id": "1239"
+    },
+    {
+      "productId": 6,
+      "title": "Burger",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 102,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_6.png",
+      "id": "9ec4"
+    },
+    {
+      "productId": 7,
+      "title": "Green Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 102,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_7.png",
+      "id": "9d49"
+    },
+    {
+      "productId": 8,
+      "title": "Green Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 102,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_8.png",
+      "id": "3b52"
+    },
+    {
+      "productId": 1,
+      "title": "Iec-Cream",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 103,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Stock Available",
+      "thumbnail": "assets/frontend_assets/ice-cream.webp",
+      "id": "72b8"
+    },
+    {
+      "productId": 2,
+      "title": "Green Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 104,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_2.png",
+      "id": "8c7a"
+    },
+    {
+      "productId": 3,
+      "title": "Green Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 105,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_3.png",
+      "id": "456f"
+    },
+    {
+      "productId": 4,
+      "title": "Green Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 103,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_4.png",
+      "id": "ab5b"
+    },
+    {
+      "productId": 5,
+      "title": "Green Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 104,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_5.png",
+      "id": "d98d"
+    },
+    {
+      "productId": 6,
+      "title": "Green Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 102,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_6.png",
+      "id": "4479"
+    },
+    {
+      "productId": 7,
+      "title": "Green Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 102,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_7.png",
+      "id": "1878"
+    },
+    {
+      "productId": 8,
+      "title": "Green Salad",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ultrices massa.",
+      "categoryId": 102,
+      "price": 9.99,
+      "discountPercentage": 7.17,
+      "stock": 5,
+      "availabilityStatus": "Low Stock",
+      "thumbnail": "assets/frontend_assets/food_8.png",
+      "id": "e18a"
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": 101,
+      "categoryName": "Ice-Cream",
+      "categoryThumbnail": "assets/frontend_assets/food_1.png",
+      "id": "5c63"
+    },
+    {
+      "categoryId": 102,
+      "categoryName": "Salad",
+      "categoryThumbnail": "assets/frontend_assets/food_2.png",
+      "id": "8a48"
+    },
+    {
+      "categoryId": 103,
+      "categoryName": "Rolls",
+      "categoryThumbnail": "assets/frontend_assets/food_3.png",
+      "id": "2fcd"
+    },
+    {
+      "id": "104",
+      "categoryName": "Desert",
+      "categoryThumbnail": "assets/frontend_assets/food_4.png"
+    },
+    {
+      "categoryId": 105,
+      "categoryName": "Sandwich",
+      "categoryThumbnail": "assets/frontend_assets/food_5.png",
+      "id": "dc95"
+    },
+    {
+      "categoryId": 106,
+      "categoryName": "Cake",
+      "categoryThumbnail": "assets/frontend_assets/food_6.png",
+      "id": "a911"
+    },
+    {
+      "categoryId": 107,
+      "categoryName": "Pasta",
+      "categoryThumbnail": "assets/frontend_assets/food_7.png",
+      "id": "0ff7"
+    },
+    {
+      "categoryId": 108,
+      "categoryName": "Vegitable",
+      "categoryThumbnail": "assets/frontend_assets/food_8.png",
+      "id": "152b"
+    },
+    {
+      "categoryId": 109,
+      "categoryName": "Chinese",
+      "categoryThumbnail": "assets/frontend_assets/food_9.png",
+      "id": "30b0"
+    },
+    {
+      "categoryId": 110,
+      "categoryName": "Fast-Food",
+      "categoryThumbnail": "assets/frontend_assets/food_10.png",
+      "id": "2674"
+    },
+    {
+      "categoryId": 111,
+      "categoryName": "Deshi",
+      "categoryThumbnail": "assets/frontend_assets/food_11.png",
+      "id": "2408"
+    }
+  ],
+  "users": [
+    {
+      "userId": 1001,
+      "firstName": "Shobuj",
+      "lastName": "Shekh",
+      "age": 28,
+      "gender": "male",
+      "address": [
+        {
+          "street": "west nakhalpara",
+          "thana": "tejgaon",
+          "city": "dhaka",
+          "district": "dhaka"
+        }
+      ],
+      "email": "mdshobuj968@gmail.com",
+      "password": "12345",
+      "image": "assets/frontend_assets/profile.png",
+      "id": "e64d"
+    },
+    {
+      "userId": 1002,
+      "firstName": "Sharmin",
+      "lastName": "Shanu",
+      "age": 28,
+      "address": [
+        {
+          "street": "kalabagan",
+          "thana": "kalabagan",
+          "city": "dhaka",
+          "district": "dhaka"
+        }
+      ],
+      "gender": "female",
+      "email": "sharminshanu@gmail.com",
+      "password": "12345",
+      "image": "assets/frontend_assets/profile.png",
+      "id": "9ca5"
+    },
+    {
+      "id": "4452",
+      "userId": 0,
+      "firstName": "Md. Shobuj",
+      "lastName": "Shekh",
+      "age": 26,
+      "gender": "male",
+      "address": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "email": "mdshobuj968@gmail.com",
+      "password": "0123456",
+      "image": ""
+    },
+    {
+      "id": "b0f8",
+      "userId": 0,
+      "firstName": "Md. Shobuj",
+      "lastName": "Shekh",
+      "age": 26,
+      "gender": "male",
+      "address": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "email": "mdshobuj968@gmail.com",
+      "password": "123456",
+      "image": ""
+    }
+  ],
+  "orders": [
+    {
+      "orderId": 2001,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 2
+        }
+      ],
+      "id": "7f0a"
+    },
+    {
+      "orderId": 2002,
+      "userId": 1002,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "quantity": 1
+        }
+      ],
+      "status": "pending",
+      "total": 9.99,
+      "paymentType": "cod",
+      "paymentStatus": "pending",
+      "id": "ad56"
+    }
+  ],
+  "carts": [
+    {
+      "id": "a684",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 2,
+          "quantity": 3,
+          "thumbnail": "assets/frontend_assets/food_2.png"
+        }
+      ],
+      "total": 29.97
+    },
+    {
+      "id": "c8c7",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 5,
+          "quantity": 2,
+          "thumbnail": "assets/frontend_assets/food_5.png"
+        }
+      ],
+      "total": 19.98
+    },
+    {
+      "id": "7637",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 3,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 29.97
+    },
+    {
+      "id": "bde5",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 3,
+          "quantity": 5,
+          "thumbnail": "assets/frontend_assets/food_3.png"
+        }
+      ],
+      "total": 49.95
+    },
+    {
+      "id": "d067",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 8,
+          "quantity": 4,
+          "thumbnail": "assets/frontend_assets/food_8.png"
+        }
+      ],
+      "total": 39.96
+    },
+    {
+      "id": "0cd5",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "1fd5",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "0b52",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "3250",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "01ce",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 2,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_2.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "e8d6",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 2,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 19.98
+    },
+    {
+      "id": "a096",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 6,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_6.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "2905",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 2,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_2.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "523c",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 2,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_2.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "0ab7",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "b61d",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 5,
+          "quantity": 10,
+          "thumbnail": "assets/frontend_assets/food_5.png"
+        }
+      ],
+      "total": 99.9
+    },
+    {
+      "id": "d062",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 5,
+          "quantity": 10,
+          "thumbnail": "assets/frontend_assets/food_5.png"
+        }
+      ],
+      "total": 99.9
+    },
+    {
+      "id": "2a1c",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 5,
+          "quantity": 10,
+          "thumbnail": "assets/frontend_assets/food_5.png"
+        }
+      ],
+      "total": 99.9
+    },
+    {
+      "id": "500b",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 5,
+          "quantity": 10,
+          "thumbnail": "assets/frontend_assets/food_5.png"
+        }
+      ],
+      "total": 99.9
+    },
+    {
+      "id": "0277",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 5,
+          "quantity": 7,
+          "thumbnail": "assets/frontend_assets/food_5.png"
+        }
+      ],
+      "total": 69.93
+    },
+    {
+      "id": "d07d",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 3,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_3.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "1a37",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 3,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_3.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "c0bd",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "65f0",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "5648",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 6,
+          "quantity": 10,
+          "thumbnail": "assets/frontend_assets/food_6.png"
+        }
+      ],
+      "total": 99.9
+    },
+    {
+      "id": "6439",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 4,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 39.96
+    },
+    {
+      "id": "cb47",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "60a5",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 2,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_2.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "28e7",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/ice-cream.webp"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "23be",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 2,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_2.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "26a3",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 2,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_2.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "f83c",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 2,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_2.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "ada4",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 2,
+          "quantity": 1,
+          "thumbnail": "assets/frontend_assets/food_2.png"
+        }
+      ],
+      "total": 9.99
+    },
+    {
+      "id": "dae6",
+      "cartId": 0,
+      "userId": 1001,
+      "products": [
+        {
+          "productId": 2,
+          "quantity": 10,
+          "thumbnail": "assets/frontend_assets/food_2.png"
+        }
+      ],
+      "total": 99.9
+    }
+  ],
+  "userList": [
+    {
+      "id": "c975",
+      "fullName": "Shafiqul Islam",
+      "email": "shafiqulislamdanish@gmail.com",
+      "mobile": "01869536332",
+      "password": "0123456789"
+    },
+    {
+      "id": "6427",
+      "fullName": "Sharmin Shanu",
+      "email": "shanuakter377@gmail.com",
+      "mobile": "01869536228",
+      "password": "123456"
+    },
+    {
+      "id": "11ce",
+      "fullName": "Md Shobuj Shekh",
+      "email": "mdshobuj968@gmail.com",
+      "mobile": "01864218654",
+      "password": "123456"
+    },
+    {
+      "id": "a9ef",
+      "fullName": "Sazzad",
+      "email": "sazzad@gmail.com",
+      "mobile": "0198529586216",
+      "password": "1234567"
+    },
+    {
+      "id": "deda",
+      "fullName": "Sharmin Shanu",
+      "email": "shanuakter377@gmail.com",
+      "mobile": "0198529586216",
+      "password": "652652+5"
+    }
+  ]
+}
